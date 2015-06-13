@@ -31,6 +31,14 @@ gulp.task('less', function() {
     .pipe(gulp.dest('app/public/stylesheets'));
 });
 
-gulp.task('default', ['less'], function() {
+gulp.task('default', ['less', 'js'], function() {
   gulp.watch(['app/styles/*/*.less'], ['less']);
+  gulp.watch(['app/libs/*.js'],['js']);
+});
+
+gulp.task('js', function() {
+  return gulp.src('app/libs/*.js')
+  .on('error', errorHandler)
+  .pipe(concat('client.js'))
+  .pipe(gulp.dest('app/public/js'));
 });

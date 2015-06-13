@@ -1,5 +1,30 @@
-<header>
-
+<header id="header">
+  <div class="top-bar">
+    <ul>
+        <li><a class="smooth-scroll" href="#header">SAFIE</a></li>
+        <li><a class="smooth-scroll" href="#about">About</a></li>
+        <li><a class="smooth-scroll" href="#features">Features</a></li>
+        <li><a class="smooth-scroll" href="#team">Team</a></li>
+    </ul>
+  </div>
 </header>
 
-<p>lorem ipsum</p>
+<div id="about">
+
+</div>
+
+<div id="features">
+
+</div>
+
+<div id="team">
+
+</div>
+<script>
+    (function() {
+      var smoothScroll = document.getElementsByClassName("smooth-scroll");
+      for(var i = 0; i < smoothScroll.length; i++) {
+        new SmoothScroll(smoothScroll[i]);
+      }
+    })();
+</script>
