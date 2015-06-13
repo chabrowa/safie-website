@@ -1,10 +1,12 @@
 var express = require('express');
-var handlebar = require('express-handlebars');
+var handlebars = require('express-handlebars');
 
 var app = express();
 var router = require(__dirname + '/app/routes');
 
-app.engine('html', handlebar({defaultLayout: 'main'}));
+app.engine('html', handlebars({extname: '.html',
+                               layoutsDir: 'app/views/layouts/',
+                               defaultLayout: 'main'}));
 app.set('view engine', 'html');
 app.set('views', __dirname + '/app/views');
 app.set('port', (process.env.PORT || 3001));
