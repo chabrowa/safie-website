@@ -26,22 +26,49 @@
     border-radius: 50%;
     margin-left: 50%;
     transform: translate(-50%, 0);
+    filter:grayscale(100%);
+    transition: filter 1s;
+  }
+  img:hover {
+    filter:none;
   }
   .team-name {
     text-align: center;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 10px;
   }
   ul {
     text-align: center;
     padding: 0px;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+    margin-top: 10px;
+    li, a{
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      display: inline-block;
+      width: 30px;
+      .icon-twitter:hover {
+        color: @twitter;
+      }
+      .icon-linkedin:hover {
+        color: @linkedIn;
+      }
+      .icon-github:hover {
+        color: @github;
+      }
+    }
   }
 }
 
 .team-title {
+  padding: 50px 0px 20px 0px;
   font-size: 30px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  cursor: default;
 }
