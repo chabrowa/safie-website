@@ -1,6 +1,8 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -424,14 +426,14 @@ li a {
 }
 li .right {
   float: right;
-  margin-right: 50px;
+  width: 140px;
   margin-top: 15px;
 }
 li .left {
   float: left;
   font-weight: bold;
   margin-top: 15px;
-  margin-left: 40px;
+  width: 100px;
 }
 .front-title {
   font-family: 'Montserrat', sans-serif;
@@ -463,45 +465,61 @@ li .left {
   display: -webkit-flex;
   display: flex;
   /* or inline-flex */
-  background-color: blue;
+  padding: 20px 40px;
 }
-.container .item-1 {
+.container #item-1 {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   order: 1;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  height: 100px;
-  width: 20%;
 }
-.container .item-2 {
+.container #item-2 {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
   order: 2;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  height: 100px;
-  width: 20%;
 }
-.container .item-3 {
+.container #item-3 {
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
   order: 3;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  height: 100px;
-  width: 20%;
 }
-.container .item-4 {
+.container #item-4 {
   -webkit-box-ordinal-group: 5;
   -webkit-order: 4;
   order: 4;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  height: 100px;
-  width: 20%;
+}
+.container img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.container .team-name {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+.container ul {
+  text-align: center;
+  padding: 0px;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+}
+.team-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
