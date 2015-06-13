@@ -19,8 +19,40 @@
           transition: all 0.3s ease-out;
         }
       }
-      &:hover .icon{
-        fill: @peter_river;
+      h1 {
+        color: @wet_asphalt;
+        transition: all 0.3s ease-out;
+      }
+      &.selfie{
+
+        &:hover {
+          .icon{
+            fill: @peter_river;
+          }
+          h1 {
+            color: @peter_river;
+          }
+        }
+      }
+      &.secure{
+        &:hover {
+          .icon{
+            fill: @nephritis;
+          }
+          h1 {
+            color: @nephritis;
+          }
+        }
+      }
+      &.safe{
+        &:hover {
+          .icon{
+            fill: @pomegranate;
+          }
+          h1 {
+            color: @pomegranate;
+          }
+        }
       }
       p {
         padding: 0 20px;
