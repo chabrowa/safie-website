@@ -2,6 +2,9 @@ html,
 body {
   height: 100%;
 }
+.clearFix {
+  clear: both;
+}
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -372,29 +375,66 @@ th {
 #about .name .pronounciation {
   font-size: 0.8em;
 }
+#about ol {
+  list-style: decimal;
+}
 #about li {
   color: black;
+}
+#about .definition {
+  margin-bottom: 0.3em;
+}
+#about .example {
+  font-size: 0.9em;
+  margin: 0.3em;
+  color: gray;
+}
+#about .countable {
+  float: right;
+}
+
+#features {
+  background-color: #e6e9ed;
+  padding: 50px 0;
+}
+#features .wrapper {
+  width: 750px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#features .wrapper .feature {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+#features .wrapper .feature svg {
+  width: 60%;
+  margin: 0 auto;
+}
+#features .wrapper .feature svg .icon {
+  fill: #34495e;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#features .wrapper .feature:hover .icon {
+  fill: #3498db;
+}
+#features .wrapper .feature p {
+  padding: 0 20px;
+  line-height: 1.5em;
 }
 
 footer {
   background-color: #34495e;
   height: 40px;
   color: white;
+  text-align: center;
+  padding: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 footer a {
   color: white;
   text-decoration: none;
-}
-footer .footer-right {
-  float: right;
-  margin-right: 30px;
-  margin-top: 10px;
-}
-footer .footer-left {
-  float: left;
-  margin-left: 30px;
-  margin-top: 10px;
 }
 
 header {
@@ -408,36 +448,29 @@ header {
   width: 100%;
   height: 60px;
 }
-ul {
+.top-bar ul {
   margin: 0px;
   list-style-type: none;
 }
-li {
+.top-bar li {
   display: inline;
 }
-li a {
+.top-bar li a {
   color: white;
   text-decoration: none;
   font-size: 22px;
   font-family: 'Montserrat', sans-serif;
 }
-li .right {
+.top-bar li .right {
   float: right;
   margin-right: 50px;
   margin-top: 15px;
 }
-li .left {
+.top-bar li .left {
   float: left;
   font-weight: bold;
   margin-top: 15px;
   margin-left: 40px;
-}
-#about {
-  height: 500px;
-}
-#features {
-  height: 500px;
-  background-color: #e6e9ed;
 }
 #team {
   height: 500px;
