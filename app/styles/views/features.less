@@ -7,10 +7,14 @@
     width: 750px;
     max-width: 100%;
     margin: 0 auto;
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
     .feature {
-      width: 33.33%;
+      max-width: 100%;
+      width: 200px;
       float: left;
       text-align: center;
+      margin: 0 auto;
       svg {
         width: 60%;
         margin: 0 auto;
@@ -60,4 +64,14 @@
       }
     }
   }
+}
+
+#feature-item-1 {
+    order: 1;
+}
+#feature-item-2 {
+    order: 2;
+}
+#feature-item-3 {
+    order: 3;
 }
