@@ -152,6 +152,7 @@
       var animationInterval, distance, loopAnimateScroll, self, startAnimateScroll, startLocation, stopAnimateScroll, timeLapsed;
       event.preventDefault();
       self = this;
+      document.getElementById("menu-id").checked = false;
       startLocation = window.pageYOffset;
       distance = self.endLocation - startLocation;
       timeLapsed = 0;
