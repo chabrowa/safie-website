@@ -14,8 +14,20 @@ header {
   height: 60px;
   z-index: 10;
 
+  .menu {
+    display: none;
+  }
+  #phone-bars {
+    display: inline;
+    color: white;
+    font-size: 22px;
+    opacity: 0;
+    float: right;
+  }
+
   ul {
     margin: 0px;
+    padding: 0px;
     list-style-type: none;
   }
   li {
@@ -35,9 +47,50 @@ header {
       float: left;
       font-weight: bold;
       margin-top: 15px;
-      margin-left: 40px;
+      margin-left: 70px;
     }
   }
+  @media screen and (max-width: 600px) {
+    ul {
+      padding-top: 15px;
+    }
+    li .left {
+      float: none;
+      margin-top: 20px;
+    }
+    #phone-bars {
+      opacity: 1;
+      margin-top: 15px;
+      width: 50px;
+    }
+    li {
+      .right{
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s;
+        float: none;
+        background-color: fade(@wet_asphalt, 90);
+        transition: opacity 0.5s;
+        width: 100%;
+
+        margin: 0px;
+
+        padding-left: 20px;
+        padding-bottom: 10px;
+      }
+      .first {
+        margin: 19px 0px 0px 0px;
+      }
+    }
+    #menu-id:checked + ul {
+      .right {
+        opacity: 1;
+
+      }
+
+    }
+  }
+
 }
 
 .front-title {
